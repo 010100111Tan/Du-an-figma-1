@@ -7,6 +7,7 @@
 
 /* ===== đổi màu 1 chỗ, ăn toàn site ===== */
 :root {
+    --font-family: "Sen", sans-serif;
     --primary: #FFB800;
     --dark: #171100;
     --bg: #FFFAF5;
@@ -32,8 +33,9 @@ body {
     max-width: calc(100% - 50px);
     margin-left: auto;
     margin-right: auto;
-    border: 10px solid red;
+    /* border: 10px solid red; */
 }
+
 
 /* ===== Base - Button ===== */
 a {
@@ -47,16 +49,17 @@ a {
   padding: 0 16px;
   line-height: 50px;
   text-align: center;
-
   /* Text */
   font-size: 1.6rem;
   /* độ đậm/nhẹ của chữ */
   font-weight: 600;
   color: var(--bg);
-
-  /* Style */
   background: var(--dark);
-  border-radius: 25px;
+  border-radius: 999px;
+}
+
+.btn:hover{
+  opacity: 0.9
 }
 
 /* ===== Header ===== */
@@ -64,10 +67,11 @@ a {
   position: sticky;
   top: -28px; /* 36 - 8 = 28*/
   z-index: 100;
+  border: 10px solid red;
 }
 
 .header{
-  background: var(--primary);
+  background: var(--bg);
 }
 
 .header .main-content {
@@ -124,3 +128,172 @@ a {
   margin-left: 49px; 
 }
 /* ===== End header ===== */
+
+/*===== Hero ===== */
+.hero{
+  padding: 56px 0px 65px;
+  border: 10px solid rgb(76, 152, 182);
+  /* background-color: chartreuse; */
+}
+
+.hero .body{
+  display: flex;
+}
+
+/* ==== hero left ==== */
+.hero .hero-left{
+  width: 48%;
+  position: relative;
+}
+
+/* --image-- */
+.hero .hero-left .image{
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+}
+/* --- floating-card --- */
+.hero .floating-card{
+  padding: 24px;
+  width: 270px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background-color: var(--bg);
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.floating-card .course-item{
+  display: flex;
+  align-items: center;
+}
+
+.floating-card .course-item + .course-item{
+  margin-top: 22px;
+}
+
+.floating-card .icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: #fff9e8;
+}
+
+.floating-card .icon-dev{
+  background-color: #FCEFFF;
+}
+
+.floating-card .icon-mkt{
+background-color: #EBEAFF;
+}
+
+.floating-card .info{
+  margin-left: 16px;
+}
+
+.floating-card .label{
+  color: var(--gray);
+  font-size: 1.4rem;
+  line-height: 1.86rem;
+}
+
+.floating-card .title{
+  color: var(--dark);
+  font-size: 1.8rem;
+  /* chữ đậm từ 100 - 900 */
+  font-weight: 600;
+  line-height:  1.6;
+}
+/* ==== hero right ====*/
+.hero .hero-right{
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 60px;
+}
+
+.hero .heading{
+  color: var(--dark);
+  font-family: var(--font-family);
+  font-size: 5.8rem;
+  font-weight: 700;
+  /* 58px × 1.17 ≈ 67.86px */
+  /* độ cao của 1 dòng chữ */
+  line-height: 1.17;
+}
+
+.hero .desc{
+  margin-top: 22px;
+  color: var(--gray);
+  font-size: 1.67rem;
+  line-height: 1.67;
+}
+
+.hero .actions{
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.hero .btn-primary{
+  min-width: 180px;
+  line-height: 64px;
+  background-color: var(--primary);
+}
+
+.hero .watch-video{
+  /* bỏ viền */
+  border: none;
+  /* bỏ nền */
+  background: transparent;
+  display: flex;
+  margin-left: 28px;
+  align-items: center;
+  /* con trỏ sẽ thành bàn tay */
+  cursor: pointer;
+}
+
+.hero .watch-video .icon-play{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: var(--bg);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.07);
+  /* background-color: aqua; */
+}
+
+.hero .watch-video span{
+  margin-left: 14px;
+  color: var(--dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+
+.hero .desc-Recent{
+  margin-top: 48px;
+}
+
+.hero .stats{
+  margin-top: 8px;
+  border: solid red;
+}
+
+.hero .stats strong{
+  margin-right: 15px;
+  color: var(--dark);
+  font-family: var(--font-family);
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+
+.hero .stats strong:nth-child(2){
+  margin-left: 28px;
+}
