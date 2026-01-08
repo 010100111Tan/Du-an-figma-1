@@ -42,6 +42,15 @@ a {
   text-decoration: none;
 }
 
+.heading-lv2{
+  color: var(--dark);
+  font-family: var(--font-family);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+
 .btn{
    /* Layout */
   display: inline-block;
@@ -282,7 +291,7 @@ background-color: #EBEAFF;
 
 .hero .stats{
   margin-top: 8px;
-  border: solid red;
+  /* border: solid red; */
 }
 
 .hero .stats strong{
@@ -296,4 +305,20 @@ background-color: #EBEAFF;
 
 .hero .stats strong:nth-child(2){
   margin-left: 28px;
+}
+
+/* ====== popular ====== */
+.popular {
+  border: solid 10px red;
+  background-color: rgb(179, 109, 182);
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.popular-top .desc{
+  margin-top: 16px;
+  width: 458px;
+  color: var(--gray);
+  font-size: 1.8rem;
+  line-height: 1.67;
 }
